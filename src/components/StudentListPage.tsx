@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 const StudentListPage: React.FC = () => {
     return (
         <div>
-
+            
         </div>
     )
 }
