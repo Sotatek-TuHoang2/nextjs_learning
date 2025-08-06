@@ -29,13 +29,13 @@ const StudentTable: React.FC<StudentTableProps> = ({
             sorter: (a, b) => Number(b.id) - Number(a.id)
         },
         {
-            title: "Họ và tên",
+            title: "Fullname",
             dataIndex: "fullName",
             key: "fullName",
             render: (name: string) => (
                 <Space>
                     <UserOutlined style={{ color: "#1890ff" }} />
-                    <span style={{ fontWeight: "500" }}>${name}</span>
+                    <span style={{ fontWeight: "500" }}>{name}</span>
                 </Space>
             )
         },
@@ -48,13 +48,18 @@ const StudentTable: React.FC<StudentTableProps> = ({
             )
         },
         {
-            title: "Ngày sinh",
+            title: "Date of birth",
             key: "dob",
             dataIndex: "dob",
             render: (dob: string) => new Date(dob).toLocaleDateString("vi-VN"),
         },
         {
-            title: "Thao tác",
+            title: "Class",
+            key: "class",
+            dataIndex: "class",
+        },
+        {
+            title: "Action",
             key: "action",
             dataIndex: "action",
             render: (_, record) => (
@@ -66,7 +71,6 @@ const StudentTable: React.FC<StudentTableProps> = ({
                             onClick={() => onDetail(record)}
                             icon={< FontAwesomeIcon icon={faEye} />}
                         >
-                            Xem chi tiết
                         </Button>
                     </Tooltip>
 
@@ -78,7 +82,6 @@ const StudentTable: React.FC<StudentTableProps> = ({
                             size="small"
                             onClick={() => onEdit(record)}
                         >
-                            Sửa
                         </Button>
                     </Tooltip>
 
@@ -95,7 +98,6 @@ const StudentTable: React.FC<StudentTableProps> = ({
                                 danger
                                 icon={<DeleteOutlined />}
                             >
-                                Xóa
                             </Button>
                         </Popconfirm>
                     </Tooltip>

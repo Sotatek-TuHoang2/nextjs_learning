@@ -1,9 +1,7 @@
 import axios from 'axios';
-import { headers } from 'next/headers';
-import { config } from 'process';
 
 const axiosInstance = axios.create({
-    baseURL: process.env.BASE_URL,
+    baseURL: process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3001',
     timeout: 10000,
     headers: {
         'Content-Type': 'application/json',

@@ -11,6 +11,7 @@ interface StudentFormModalProps {
     initialValues?: Student;
     title: string,
     confirmLoading: boolean,
+    contentSubmit: string,
 }
 
 const StudentFormModal: React.FC<StudentFormModalProps> = ({
@@ -20,6 +21,7 @@ const StudentFormModal: React.FC<StudentFormModalProps> = ({
     initialValues,
     title,
     confirmLoading,
+    contentSubmit
 }) => {
     const [form] = Form.useForm();
 
@@ -57,7 +59,7 @@ const StudentFormModal: React.FC<StudentFormModalProps> = ({
                     type='default'
                     loading={confirmLoading}
                 >
-                    Hủy
+                    Cancel
                 </Button>,
                 <Button
                     key='submit'
@@ -65,7 +67,7 @@ const StudentFormModal: React.FC<StudentFormModalProps> = ({
                     type='primary'
                     loading={confirmLoading}
                 >
-                    Lưu
+                    {contentSubmit}
                 </Button>
             ]}
         >
