@@ -64,7 +64,7 @@ const StudentTable: React.FC<StudentTableProps> = ({
             dataIndex: "action",
             render: (_, record) => (
                 <Space>
-                    <Tooltip title="Xem chi tiết">
+                    <Tooltip title="See details">
                         <Button
                             type='primary'
                             size='small'
@@ -74,7 +74,7 @@ const StudentTable: React.FC<StudentTableProps> = ({
                         </Button>
                     </Tooltip>
 
-                    <Tooltip title="Sửa">
+                    <Tooltip title="Edit">
                         <Button
                             type='primary'
                             ghost
@@ -85,12 +85,12 @@ const StudentTable: React.FC<StudentTableProps> = ({
                         </Button>
                     </Tooltip>
 
-                    <Tooltip title="Xóa">
+                    <Tooltip title="Delete">
                         <Popconfirm
-                            title="Bạn có chắc sẽ xóa sinh viên này?"
+                            title="Are you sure you want to delete this student?"
                             onConfirm={() => onDelete(record.id)}
-                            okText="Xóa"
-                            cancelText="Hủy"
+                            okText="Delete"
+                            cancelText="Cancel"
                         >
                             <Button
                                 type='primary'

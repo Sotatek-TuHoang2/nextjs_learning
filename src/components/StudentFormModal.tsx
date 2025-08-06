@@ -74,26 +74,26 @@ const StudentFormModal: React.FC<StudentFormModalProps> = ({
             <Form form={form} layout='vertical' initialValues={{ remember: true}}>
                 <Form.Item
                     name="fullName"
-                    label="Họ và tên"
-                    rules={[ {required: true, message: "Vui lòng nhập họ tên"} ]}
+                    label="Fullname"
+                    rules={[ {required: true, message: "Please enter your fullname"} ]}
                 >
-                    <Input placeholder='Nhập họ và tên'></Input>
+                    <Input placeholder='Enter your fullname'></Input>
                 </Form.Item>
 
                 <Form.Item
                     name="email"
                     label="Email"
                     rules={[
-                        {required: true, message: "Vui lòng email"},
-                        {type: "email", message: "Vui lòng nhập đúng định dạng email" } 
+                        {required: true, message: "Please enter your email"},
+                        {type: "email", message: "Please enter correct email format" } 
                     ]}
                 >
-                    <Input placeholder='Nhập Email'></Input>
+                    <Input placeholder='Enter your email'></Input>
                 </Form.Item>
                 <Form.Item
                     name="dob"
-                    label="Ngày sinh"
-                    rules={[ {required: true, message: "Vui lòng nhập ngày sinh"} ]}
+                    label="Date of birth"
+                    rules={[ {required: true, message: "Please select your date of birth"} ]}
                 >
                     <DatePicker
                         style={{width: "100%"}}
@@ -102,10 +102,10 @@ const StudentFormModal: React.FC<StudentFormModalProps> = ({
                 </Form.Item>
                 <Form.Item
                     name="class"
-                    label="Lớp"
-                    rules={[ {required: true, message: "Vui lòng nhập lớp học"} ]}
+                    label="Class"
+                    rules={[ {required: true, message: "Please enter your class"} ]}
                 >
-                    <Input placeholder='Nhập lớp của bạn'></Input>
+                    <Input placeholder='Enter your class'></Input>
                 </Form.Item>
             </Form>
         </Modal>
